@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+
+require('@anycli/command').run()
