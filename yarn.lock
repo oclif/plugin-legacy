@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@anycli/command@^1.2.10":
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/@anycli/command/-/command-1.2.10.tgz#6870c79a531513a31cdd12abd45f0cd2d4322b4b"
+  dependencies:
+    "@anycli/parser" "^3.2.6"
+
 "@anycli/command@^1.2.9":
   version "1.2.9"
   resolved "https://registry.yarnpkg.com/@anycli/command/-/command-1.2.9.tgz#6db08fbb3537c8cc2f616415fcd6360043750f38"
@@ -31,9 +37,23 @@
     strip-ansi "^4.0.0"
     wrap-ansi "^3.0.1"
 
+"@anycli/errors@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@anycli/errors/-/errors-0.2.1.tgz#719a95cd9c23838c65929da5d625a7537dd7d035"
+  dependencies:
+    clean-stack "^1.3.0"
+    fs-extra "^5.0.0"
+    indent-string "^3.2.0"
+    strip-ansi "^4.0.0"
+    wrap-ansi "^3.0.1"
+
 "@anycli/parser@^3.2.5":
   version "3.2.5"
   resolved "https://registry.yarnpkg.com/@anycli/parser/-/parser-3.2.5.tgz#d0e7ddb14945cb84377fa69095009ca6005e6b6d"
+
+"@anycli/parser@^3.2.6":
+  version "3.2.6"
+  resolved "https://registry.yarnpkg.com/@anycli/parser/-/parser-3.2.6.tgz#bbd119a80709099179a9f11af0dc44b68c54575b"
 
 "@anycli/plugin-help@^0.6.4":
   version "0.6.4"
@@ -77,11 +97,11 @@
     strip-ansi "^4.0.0"
     supports-color "^5.1.0"
 
-"@heroku-cli/command@^8.0.0-anycli.0":
-  version "8.0.0-anycli.0"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/command/-/command-8.0.0-anycli.0.tgz#d720266b2eb4ff123efdb0d9ac4225ae6a917390"
+"@heroku-cli/command@^8.0.0-anycli.1":
+  version "8.0.0-anycli.1"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/command/-/command-8.0.0-anycli.1.tgz#ee50e8f21e47a83806c5ab8312f20a8858bebb9e"
   dependencies:
-    cli-ux "^3.3.17"
+    cli-ux "^3.3.18"
     debug "^3.1.0"
     heroku-client "3.0.6"
     http-call "^5.0.2"
@@ -349,9 +369,9 @@ cli-ux@^2.0.17, cli-ux@^2.0.20:
     supports-color "^5.1.0"
     ts-lodash "^4.0.8"
 
-cli-ux@^3.3.17:
-  version "3.3.17"
-  resolved "https://registry.yarnpkg.com/cli-ux/-/cli-ux-3.3.17.tgz#010ab03da355ebd05a62a776140cb76ee8857ca7"
+cli-ux@^3.3.18:
+  version "3.3.18"
+  resolved "https://registry.yarnpkg.com/cli-ux/-/cli-ux-3.3.18.tgz#e14419abb33824b905507fa2e892adf79aeee16f"
   dependencies:
     "@anycli/screen" "^0.0.3"
     "@heroku/linewrap" "^1.0.0"
@@ -362,7 +382,7 @@ cli-ux@^3.3.17:
     extract-stack "^1.0.0"
     fs-extra "^5.0.0"
     indent-string "^3.2.0"
-    lodash "^4.17.4"
+    lodash "^4.17.5"
     password-prompt "^1.0.4"
     semver "^5.5.0"
     strip-ansi "^4.0.0"
@@ -1022,7 +1042,7 @@ lodash.zip@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.zip/-/lodash.zip-4.2.0.tgz#ec6662e4896408ed4ab6c542a3990b72cc080020"
 
-lodash@^4.17.4, lodash@^4.3.0, lodash@^4.5.1:
+lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.5.1:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
