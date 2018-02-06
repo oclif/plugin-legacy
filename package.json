@@ -54,6 +54,7 @@
     "anycli-plugin"
   ],
   "license": "MIT",
+  "main": "lib/index.js",
   "repository": "anycli/plugin-legacy",
   "scripts": {
     "build": "rm -rf lib && tsc",
@@ -62,5 +63,6 @@
     "posttest": "yarn run lint",
     "prepublishOnly": "yarn run build && anycli-dev manifest",
     "test": "echo mocha --forbid-only \"test/**/*.test.ts\""
-  }
+  },
+  "types": "lib/index.d.ts"
 }
