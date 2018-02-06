@@ -25,9 +25,9 @@
   },
   "devDependencies": {
     "@anycli/config": "^1.3.10",
-    "@anycli/dev-cli": "^0.1.6",
+    "@anycli/dev-cli": "^0.2.2",
     "@anycli/errors": "^0.2.0",
-    "@anycli/plugin-help": "^0.6.3",
+    "@anycli/plugin-help": "^0.6.4",
     "@anycli/test": "^0.10.11",
     "@anycli/tslint": "^0.2.6",
     "@types/chai": "^4.1.2",
@@ -37,7 +37,7 @@
     "chai": "^4.1.2",
     "concurrently": "^3.5.1",
     "globby": "^7.1.1",
-    "heroku-apps": "^2.4.21",
+    "heroku-apps": "^2.4.22",
     "mocha": "^5.0.0",
     "ts-node": "^4.1.0",
     "typescript": "^2.7.1"
