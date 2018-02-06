@@ -5,16 +5,23 @@
   "author": "Jeff Dickey @jdxcode",
   "anycli": {
     "commands": "./lib/commands",
-    "plugins": [
-      "@anycli/plugin-help"
+    "hooks": {
+      "init": "./lib/hooks/init"
+    },
+    "devPlugins": [
+      "@anycli/plugin-help",
+      "heroku-apps"
     ]
   },
   "bugs": "https://github.com/anycli/plugin-legacy/issues",
   "dependencies": {
-    "@anycli/command": "^1.2.7"
+    "@anycli/command": "^1.2.8",
+    "@heroku-cli/command": "^8.0.0-anycli.0",
+    "@types/semver": "^5.5.0",
+    "semver": "^5.5.0"
   },
   "devDependencies": {
-    "@anycli/config": "^1.2.3",
+    "@anycli/config": "^1.3.3",
     "@anycli/dev-cli": "^0.1.6",
     "@anycli/plugin-help": "^0.6.3",
     "@anycli/test": "^0.10.11",
@@ -22,9 +29,11 @@
     "@types/chai": "^4.1.2",
     "@types/mocha": "^2.2.48",
     "@types/node": "^9.4.0",
+    "@types/supports-color": "^3.1.0",
     "chai": "^4.1.2",
     "concurrently": "^3.5.1",
     "globby": "^7.1.1",
+    "heroku-apps": "^2.4.21",
     "mocha": "^5.0.0",
     "ts-node": "^4.1.0",
     "typescript": "^2.7.1"
@@ -48,6 +57,6 @@
     "postpublish": "rm .anycli.manifest.json",
     "posttest": "yarn run lint",
     "prepublishOnly": "yarn run build && anycli-dev manifest",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\""
+    "test": "echo mocha --forbid-only \"test/**/*.test.ts\""
   }
 }
