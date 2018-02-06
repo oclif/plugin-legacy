@@ -1,7 +1,6 @@
 import * as Config from '@anycli/config'
 import {color} from '@heroku-cli/color'
 import {Command, flags as Flags, vars} from '@heroku-cli/command'
-import * as fs from 'fs'
 import * as path from 'path'
 import * as semver from 'semver'
 import {inspect} from 'util'
@@ -9,47 +8,55 @@ import {inspect} from 'util'
 import {compact} from '../util'
 
 const debug = require('debug')('@anycli/plugin-legacy')
+const pjson = require('../../package.json')
 
 export const init: Config.Hook<'init'> = async function (opts) {
   opts.config.plugins.forEach((p, i) => {
     if (p.valid) return
     delete Config.Plugin.loadedPlugins[p.root]
-    opts.config.plugins[i] = new PluginLegacy(opts.config, p)
+    try {
+      opts.config.plugins[i] = new PluginLegacy(opts.config, p)
+    } catch (err) {
+      err.name = `@anycli/plugin-legacy: Plugin ${p.name}: ${err.name}`
+      err.detail = compact([err.detail, p.root]).join(' ')
+      process.emitWarning(err)
+    }
   })
 }
 
 class PluginLegacy extends Config.Plugin implements Config.IPlugin {
+  _base = `${pjson.name}@${pjson.version}`
+  protected _moduleCommands?: Config.Command.Class[]
+
   constructor(public config: Config.IConfig, public base: Config.IPlugin) {
     super(base)
   }
 
-  protected _manifest(ignoreManifest: boolean) {
-    if (fs.existsSync(path.join(this.root, '.anycli.manifest.json'))) return super._manifest(ignoreManifest)
-    let manifest: Config.Manifest = {
-      version: this.version,
-      commands: {},
-    }
-    if (this.commandsDir) {
-      manifest = Config.Manifest.build(this.version, this.commandsDir, id => this._findCommand(id))
-    }
-    manifest.commands = {
-      ...manifest.commands,
-      ...this.moduleCommands,
-    }
-    return manifest
+  protected get _commandIDs(): string[] {
+    return super._commandIDs
+    .concat(this.moduleCommands.map(c => c.id))
   }
 
-  protected get moduleCommands(): {[id: string]: Config.Command} {
+  protected _findCommand(id: string, opts: {must: true}): Config.Command.Class
+  protected _findCommand(id: string, opts?: {must?: boolean}): Config.Command.Class | undefined
+  protected _findCommand(id: string, opts: {must?: boolean} = {}) {
+    let cmd = super._findCommand(id)
+    if (cmd) return cmd
+    cmd = this.moduleCommands
+    .find(c => c.id === id)
+    if (!cmd && opts.must) throw new Error(`command ${id} not found`)
+    return cmd
+  }
+
+  protected get moduleCommands(): Config.Command.Class[] {
+    if (this._moduleCommands) return this._moduleCommands
     const main = this.pjson.main
-    if (!main) return {}
+    if (!main) return []
     const module = require(path.join(this.root, main))
-    if (!module.commands) return {}
-    return module.commands
+    if (!module.commands) return []
+    debug('loading module commands')
+    return this._moduleCommands = module.commands
     .map((c: any) => this.convertCommand(c))
-    .reduce((commands: {[id: string]: Config.Command}, c: Config.Command.Class) => {
-      commands[c.id] = Config.Command.toCached(c)
-      return commands
-    }, {} as {[id: string]: Config.Command})
   }
 
   private convertCommand(c: any): Config.Command.Class {
