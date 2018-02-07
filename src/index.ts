@@ -99,7 +99,7 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
       static examples = c.examples || c.example
 
       async run() {
-        const color: typeof Color = require('@heroku-cli/color')
+        const color: typeof Color = require('@heroku-cli/color').default
         const {flags, argv, args} = this.parse(this.constructor as any)
         const ctx: any = {
           version: this.config.userAgent,
