@@ -1,3 +1,11 @@
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/anycli/plugin-legacy/compare/95e95a98efd5cc9126b202774ca1e3c6c90e10ce...v0.1.1) (2018-02-07)
+
+
+### Bug Fixes
+
+* lazy-load ([fb10e84](https://github.com/anycli/plugin-legacy/commit/fb10e84))
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/anycli/plugin-legacy/compare/56b38fe1cd7e65d9ace391872566582ccfb8dc60...v0.1.0) (2018-02-07)
 
