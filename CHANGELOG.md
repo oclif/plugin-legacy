@@ -1,3 +1,11 @@
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/anycli/plugin-legacy/compare/14cd86d327b1469555e45a2c607aabd8fc7754cb...v0.1.3) (2018-02-07)
+
+
+### Bug Fixes
+
+* fixed colors ([0727459](https://github.com/anycli/plugin-legacy/commit/0727459))
+
 <a name="0.1.2"></a>
 ## [0.1.2](https://github.com/anycli/plugin-legacy/compare/fb10e8494f19a58d30f4c851beed0fe03b15ab32...v0.1.2) (2018-02-07)
 
