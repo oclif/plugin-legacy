@@ -95,6 +95,7 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
       static help = c.help
       static aliases = c.aliases || []
       static usage = c.usage
+      static examples = c.examples || c.example
 
       async run() {
         const {flags, argv, args} = this.parse(this.constructor as any)
