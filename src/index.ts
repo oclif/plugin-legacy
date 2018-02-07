@@ -16,17 +16,18 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
 
   constructor(public config: Config.IConfig, public base: Config.IPlugin) {
     super(base)
+    debug('loading legacy plugin', base.root)
   }
 
-  protected get _commandIDs(): string[] {
-    return super._commandIDs
+  get commandIDs(): string[] {
+    return super.commandIDs
     .concat(this.moduleCommands.map(c => c.id))
   }
 
-  protected _findCommand(id: string, opts: {must: true}): Config.Command.Class
-  protected _findCommand(id: string, opts?: {must?: boolean}): Config.Command.Class | undefined
-  protected _findCommand(id: string, opts: {must?: boolean} = {}) {
-    let cmd = super._findCommand(id)
+  findCommand(id: string, opts: {must: true}): Config.Command.Class
+  findCommand(id: string, opts?: {must?: boolean}): Config.Command.Class | undefined
+  findCommand(id: string, opts: {must?: boolean} = {}) {
+    let cmd = super.findCommand(id)
     if (cmd) return cmd
     cmd = this.moduleCommands
     .find(c => c.id === id)
