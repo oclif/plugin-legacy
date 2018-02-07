@@ -1,3 +1,17 @@
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/anycli/plugin-legacy/compare/56b38fe1cd7e65d9ace391872566582ccfb8dc60...v0.1.0) (2018-02-07)
+
+
+### Bug Fixes
+
+* add examples ([0913816](https://github.com/anycli/plugin-legacy/commit/0913816))
+* bump config ([95e95a9](https://github.com/anycli/plugin-legacy/commit/95e95a9))
+
+
+### Features
+
+* add topics ([7af0e27](https://github.com/anycli/plugin-legacy/commit/7af0e27))
+
 <a name="0.0.5"></a>
 ## [0.0.5](https://github.com/anycli/plugin-legacy/compare/81242158c71ddabbe955fa7b886399d3ab979c55...v0.0.5) (2018-02-07)
 
