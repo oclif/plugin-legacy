@@ -67,8 +67,7 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
   private convertFromV5(c: any): any {
     class V5 extends Command {
       static id = compact([c.topic, c.command]).join(':')
-      static title = c.title || c.description
-      static description = c.help
+      static description = [c.description, c.help].join('\n')
       static hidden = !!c.hidden
       static args = (c.args || []).map((a: any) => ({
         ...a,
