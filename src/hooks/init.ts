@@ -4,14 +4,16 @@ import {PluginLegacy} from '..'
 import {compact} from '../util'
 
 export const init: Config.Hook<'init'> = async function (opts) {
-  opts.config.plugins.forEach((p, i) => {
+  await Promise.all(opts.config.plugins.map(async (p, i) => {
     if (p.valid) return
     try {
-      opts.config.plugins[i] = new PluginLegacy(opts.config, p)
+      const plugin = new PluginLegacy(opts.config, p)
+      await plugin.load()
+      opts.config.plugins[i] = plugin
     } catch (err) {
       err.name = `@anycli/plugin-legacy: Plugin ${p.name}: ${err.name}`
       err.detail = compact([err.detail, p.root]).join(' ')
       process.emitWarning(err)
     }
-  })
+  }))
 }
