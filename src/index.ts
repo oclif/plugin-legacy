@@ -92,7 +92,7 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
         required: a.required !== false && !(a as any).optional,
       }))
       static flags = convertFlagsFromV5(c.flags)
-      static variableArgs = !!c.variableArgs
+      static strict = c.strict || !c.variableArgs
       static help = c.help
       static aliases = c.aliases || []
       static usage = c.usage
