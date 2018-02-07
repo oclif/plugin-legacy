@@ -1,3 +1,11 @@
+<a name="0.0.5"></a>
+## [0.0.5](https://github.com/anycli/plugin-legacy/compare/81242158c71ddabbe955fa7b886399d3ab979c55...v0.0.5) (2018-02-07)
+
+
+### Bug Fixes
+
+* updated command ([56b38fe](https://github.com/anycli/plugin-legacy/commit/56b38fe))
+
 <a name="0.0.4"></a>
 ## [0.0.4](https://github.com/anycli/plugin-legacy/compare/beffae9cc2602190cafc533efb4889d90fcc1e05...v0.0.4) (2018-02-07)
 
