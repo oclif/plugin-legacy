@@ -1,3 +1,12 @@
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/anycli/plugin-legacy/compare/fb10e8494f19a58d30f4c851beed0fe03b15ab32...v0.1.2) (2018-02-07)
+
+
+### Bug Fixes
+
+* async ([b5cd95f](https://github.com/anycli/plugin-legacy/commit/b5cd95f))
+* updated deps ([14cd86d](https://github.com/anycli/plugin-legacy/commit/14cd86d))
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/anycli/plugin-legacy/compare/95e95a98efd5cc9126b202774ca1e3c6c90e10ce...v0.1.1) (2018-02-07)
 
