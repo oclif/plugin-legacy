@@ -13,10 +13,16 @@ const pjson = require('../package.json')
 export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
   _base = `${pjson.name}@${pjson.version}`
   protected _moduleCommands?: Config.Command.Class[]
+  protected _moduleTopics?: Config.Topic[]
 
   constructor(public config: Config.IConfig, public base: Config.IPlugin) {
     super(base)
     debug('loading legacy plugin', base.root)
+  }
+
+  get topics(): Config.Topic[] {
+    return super.topics
+    .concat(this.moduleTopics)
   }
 
   get commandIDs(): string[] {
@@ -41,9 +47,19 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
     if (!main) return []
     const module = require(path.join(this.root, main))
     if (!module.commands) return []
-    debug('loading module commands')
+    debug('loading module commands', this.root)
     return this._moduleCommands = module.commands
     .map((c: any) => this.convertCommand(c))
+  }
+
+  protected get moduleTopics(): Config.Topic[] {
+    if (this._moduleTopics) return this._moduleTopics
+    const main = this.pjson.main
+    if (!main) return []
+    const module = require(path.join(this.root, main))
+    if (!module.commands) return []
+    debug('loading module topics', this.root)
+    return this._moduleTopics = module.topics
   }
 
   private convertCommand(c: any): Config.Command.Class {
