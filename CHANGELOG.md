@@ -1,3 +1,11 @@
+<a name="0.1.4"></a>
+## [0.1.4](https://github.com/anycli/plugin-legacy/compare/07274598d280913590aedec2a57d6c7978813a9a...v0.1.4) (2018-02-07)
+
+
+### Bug Fixes
+
+* set strict if variableArgs is set ([6e313a2](https://github.com/anycli/plugin-legacy/commit/6e313a2))
+
 <a name="0.1.3"></a>
 ## [0.1.3](https://github.com/anycli/plugin-legacy/compare/14cd86d327b1469555e45a2c607aabd8fc7754cb...v0.1.3) (2018-02-07)
 
