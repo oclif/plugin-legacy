@@ -1,8 +1,8 @@
 import * as Config from '@anycli/config'
-import {color} from '@heroku-cli/color'
-import {Command, flags as Flags, vars} from '@heroku-cli/command'
+import {color as Color} from '@heroku-cli/color'
+import * as HCli from '@heroku-cli/command'
 import * as path from 'path'
-import * as semver from 'semver'
+import * as Semver from 'semver'
 import {inspect} from 'util'
 
 import {compact} from './util'
@@ -82,6 +82,7 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
   }
 
   private convertFromV5(c: any): any {
+    const {Command, flags: Flags, vars} = require('@heroku-cli/command') as typeof HCli
     class V5 extends Command {
       static id = compact([c.topic, c.command]).join(':')
       static description = [c.description, c.help].join('\n')
@@ -98,6 +99,7 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
       static examples = c.examples || c.example
 
       async run() {
+        const color: typeof Color = require('@heroku-cli/color')
         const {flags, argv, args} = this.parse(this.constructor as any)
         const ctx: any = {
           version: this.config.userAgent,
@@ -130,6 +132,29 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
       }
     }
 
+    function convertFlagsFromV5(flags: any): any {
+      if (!flags) return {}
+      if (!Array.isArray(flags)) return flags
+      return flags.reduce(
+        (flags, flag) => {
+          let opts = {
+            char: flag.char,
+            description: flag.description,
+            hidden: flag.hidden,
+            required: flag.required || flag.optional === false,
+            parse: flag.parse,
+          }
+          for (let [k, v] of Object.entries(opts)) {
+            if (v === undefined) delete (opts as any)[k]
+          }
+          if (!opts.parse) delete opts.parse
+          flags[flag.name] = flag.hasValue ? Flags.string(opts as any) : Flags.boolean(opts as any)
+          return flags
+        },
+        {} as any,
+      )
+    }
+
     if (c.needsApp || c.wantsApp) {
       V5.flags.app = Flags.app({required: !!c.needsApp})
       V5.flags.remote = Flags.remote()
@@ -143,6 +168,7 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
   }
 
   private isICommand(c: any) {
+    const semver: typeof Semver = require('semver')
     if (!c._version) return false
     return semver.gte(c._version, '11.0.0')
   }
@@ -157,27 +183,4 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
     return typeof c === 'function'
     // if (c._version && deps.semver.lt(c._version, '11.0.0')) return true
   }
-}
-
-function convertFlagsFromV5(flags: any): any {
-  if (!flags) return {}
-  if (!Array.isArray(flags)) return flags
-  return flags.reduce(
-    (flags, flag) => {
-      let opts = {
-        char: flag.char,
-        description: flag.description,
-        hidden: flag.hidden,
-        required: flag.required || flag.optional === false,
-        parse: flag.parse,
-      }
-      for (let [k, v] of Object.entries(opts)) {
-        if (v === undefined) delete (opts as any)[k]
-      }
-      if (!opts.parse) delete opts.parse
-      flags[flag.name] = flag.hasValue ? Flags.string(opts as any) : Flags.boolean(opts as any)
-      return flags
-    },
-    {} as any,
-  )
 }
