@@ -1,3 +1,11 @@
+<a name="0.1.8"></a>
+## [0.1.8](https://github.com/oclif/plugin-legacy/compare/v0.1.7...v0.1.8) (2018-02-13)
+
+
+### Bug Fixes
+
+* oclif rename ([da7b203](https://github.com/oclif/plugin-legacy/commit/da7b203))
+
 <a name="0.1.4"></a>
 ## [0.1.4](https://github.com/anycli/plugin-legacy/compare/07274598d280913590aedec2a57d6c7978813a9a...v0.1.4) (2018-02-07)
 
