@@ -1,6 +1,6 @@
-import * as Config from '@oclif/config'
 import {color as Color} from '@heroku-cli/color'
 import * as HCli from '@heroku-cli/command'
+import * as Config from '@oclif/config'
 import * as path from 'path'
 import * as Semver from 'semver'
 import {inspect} from 'util'
