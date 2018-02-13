@@ -1,4 +1,4 @@
-import * as Config from '@anycli/config'
+import * as Config from '@oclif/config'
 import {color as Color} from '@heroku-cli/color'
 import * as HCli from '@heroku-cli/command'
 import * as path from 'path'
@@ -7,7 +7,7 @@ import {inspect} from 'util'
 
 import {compact} from './util'
 
-const debug = require('debug')('@anycli/plugin-legacy')
+const debug = require('debug')('@oclif/plugin-legacy')
 const pjson = require('../package.json')
 
 export class PluginLegacy extends Config.Plugin implements Config.IPlugin {

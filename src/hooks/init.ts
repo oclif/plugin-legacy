@@ -1,4 +1,4 @@
-import * as Config from '@anycli/config'
+import * as Config from '@oclif/config'
 
 import {PluginLegacy} from '..'
 import {compact} from '../util'
@@ -11,7 +11,7 @@ export const init: Config.Hook<'init'> = async function (opts) {
       await plugin.load()
       opts.config.plugins[i] = plugin
     } catch (err) {
-      err.name = `@anycli/plugin-legacy: Plugin ${p.name}: ${err.name}`
+      err.name = `@oclif/plugin-legacy: Plugin ${p.name}: ${err.name}`
       err.detail = compact([err.detail, p.root]).join(' ')
       process.emitWarning(err)
     }
