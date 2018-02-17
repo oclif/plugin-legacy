@@ -53,6 +53,7 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
   }
 
   protected get moduleTopics(): Config.Topic[] {
+    if (this.pjson.oclif.topics) return []
     if (this._moduleTopics) return this._moduleTopics
     const main = this.pjson.main
     if (!main) return []
