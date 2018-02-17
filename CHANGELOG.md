@@ -1,3 +1,11 @@
+<a name="1.0.4"></a>
+## [1.0.4](https://github.com/oclif/plugin-legacy/compare/db60a6ec3970f395c44ed0ceb4fa8c57a0e01660...v1.0.4) (2018-02-17)
+
+
+### Bug Fixes
+
+* do not return topics if defined in pjson ([c32e019](https://github.com/oclif/plugin-legacy/commit/c32e019))
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/oclif/plugin-legacy/compare/ec018e9922a8d7975ed3075209f2f1bd7303892d...v1.0.2) (2018-02-15)
 
