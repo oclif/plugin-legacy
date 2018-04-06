@@ -1,3 +1,11 @@
+<a name="1.0.7"></a>
+## [1.0.7](https://github.com/oclif/plugin-legacy/compare/5aef9f29dfdc7c22e4879fb870e950f7e2b3ce82...v1.0.7) (2018-04-06)
+
+
+### Bug Fixes
+
+* updated deps ([38e96b4](https://github.com/oclif/plugin-legacy/commit/38e96b4))
+
 <a name="1.0.6"></a>
 ## [1.0.6](https://github.com/oclif/plugin-legacy/compare/ab92d2291813cca255e893bf3d0ae51b8b3b6f8f...v1.0.6) (2018-03-23)
 
