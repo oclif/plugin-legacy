@@ -35,10 +35,12 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
   findCommand(id: string, opts: {must?: boolean} = {}) {
     let cmd = super.findCommand(id)
     if (cmd) return cmd
-    cmd = this.moduleCommands
-    .find(c => c.id === id)
-    if (!cmd && opts.must) throw new Error(`command ${id} not found`)
-    return cmd
+    cmd = this.moduleCommands.find(c => c.id === id)
+    if (cmd) {
+      cmd.plugin = this
+      return cmd
+    }
+    if (opts.must) throw new Error(`command ${id} not found`)
   }
 
   protected get moduleCommands(): Config.Command.Class[] {
