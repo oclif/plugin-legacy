@@ -1,3 +1,11 @@
+<a name="1.0.9"></a>
+## [1.0.9](https://github.com/oclif/plugin-legacy/compare/v1.0.8...v1.0.9) (2018-04-09)
+
+
+### Bug Fixes
+
+* ran generator ([f967f11](https://github.com/oclif/plugin-legacy/commit/f967f11))
+
 <a name="1.0.8"></a>
 ## [1.0.8](https://github.com/oclif/plugin-legacy/compare/38e96b4e5526698d455e42a489caafd6f806f4fe...v1.0.8) (2018-04-09)
 
