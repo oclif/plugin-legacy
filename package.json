@@ -13,8 +13,8 @@
     "semver": "^5.5.0"
   },
   "devDependencies": {
-    "@heroku-cli/plugin-apps": "^2.4.33",
-    "@oclif/config": "^1.4.10",
+    "@heroku-cli/plugin-apps": "^2.4.34",
+    "@oclif/config": "^1.4.12",
     "@oclif/dev-cli": "^1.9.16",
     "@oclif/errors": "^1.0.4",
     "@oclif/plugin-help": "^1.2.3",
