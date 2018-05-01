@@ -1,3 +1,11 @@
+<a name="1.0.13"></a>
+## [1.0.13](https://github.com/oclif/plugin-legacy/compare/v1.0.12...v1.0.13) (2018-05-01)
+
+
+### Bug Fixes
+
+* updated command ([4fcda4d](https://github.com/oclif/plugin-legacy/commit/4fcda4d))
+
 <a name="1.0.12"></a>
 ## [1.0.12](https://github.com/oclif/plugin-legacy/compare/v1.0.11...v1.0.12) (2018-05-01)
 
