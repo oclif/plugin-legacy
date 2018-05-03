@@ -1,3 +1,11 @@
+<a name="1.0.14"></a>
+## [1.0.14](https://github.com/oclif/plugin-legacy/compare/v1.0.13...v1.0.14) (2018-05-03)
+
+
+### Bug Fixes
+
+* use new manifest path ([3c22cb8](https://github.com/oclif/plugin-legacy/commit/3c22cb8))
+
 <a name="1.0.13"></a>
 ## [1.0.13](https://github.com/oclif/plugin-legacy/compare/v1.0.12...v1.0.13) (2018-05-01)
 
