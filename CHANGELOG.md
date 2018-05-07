@@ -1,3 +1,11 @@
+<a name="1.0.15"></a>
+## [1.0.15](https://github.com/oclif/plugin-legacy/compare/v1.0.14...v1.0.15) (2018-05-07)
+
+
+### Bug Fixes
+
+* add -o flag back ([1da9ac1](https://github.com/oclif/plugin-legacy/commit/1da9ac1))
+
 <a name="1.0.14"></a>
 ## [1.0.14](https://github.com/oclif/plugin-legacy/compare/v1.0.13...v1.0.14) (2018-05-03)
 
