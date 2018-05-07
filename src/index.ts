@@ -165,7 +165,7 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
     if (c.needsOrg || c.wantsOrg) {
       let opts = {required: !!c.needsOrg, hidden: false, description: 'team to use'}
       V5.flags.team = Flags.team(opts)
-      V5.flags.org = Flags.team({hidden: true})
+      V5.flags.org = Flags.team({char: 'o', hidden: true})
     }
     return V5
   }
