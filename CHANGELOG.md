@@ -1,3 +1,10 @@
+## [1.0.16](https://github.com/oclif/plugin-legacy/compare/v1.0.15...v1.0.16) (2018-06-20)
+
+
+### Bug Fixes
+
+* convert v5 command always ([67ce8bb](https://github.com/oclif/plugin-legacy/commit/67ce8bb))
+
 <a name="1.0.15"></a>
 ## [1.0.15](https://github.com/oclif/plugin-legacy/compare/v1.0.14...v1.0.15) (2018-05-07)
 
