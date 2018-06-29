@@ -1,5 +1,5 @@
-import {color as Color} from '@heroku-cli/color'
 import * as HCli from '@heroku-cli/command'
+import {color as Color} from '@oclif/color'
 import * as Config from '@oclif/config'
 import * as path from 'path'
 import * as Semver from 'semver'
@@ -102,7 +102,7 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
       static examples = c.examples || c.example
 
       async run() {
-        const color: typeof Color = require('@heroku-cli/color').default
+        const color: typeof Color = require('@oclif/color').default
         const {flags, argv, args} = this.parse(this.constructor as any)
         const ctx: any = {
           version: this.config.userAgent,
