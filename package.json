@@ -10,7 +10,8 @@
     "@oclif/command": "^1.4.34",
     "ansi-escapes": "^3.1.0",
     "debug": "^3.1.0",
-    "semver": "^5.5.0"
+    "semver": "^5.5.0",
+    "tslib": "^1.9.3"
   },
   "devDependencies": {
     "@heroku-cli/plugin-apps": "^2.6.0",
