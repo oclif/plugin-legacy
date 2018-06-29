@@ -1,3 +1,10 @@
+## [1.0.17](https://github.com/oclif/plugin-legacy/compare/v1.0.16...v1.0.17) (2018-06-29)
+
+
+### Bug Fixes
+
+* switch to [@oclif](https://github.com/oclif)/color ([a3ab90e](https://github.com/oclif/plugin-legacy/commit/a3ab90e))
+
 ## [1.0.16](https://github.com/oclif/plugin-legacy/compare/v1.0.15...v1.0.16) (2018-06-20)
 
 
