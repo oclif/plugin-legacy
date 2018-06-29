@@ -1,3 +1,10 @@
+## [1.0.18](https://github.com/oclif/plugin-legacy/compare/v1.0.17...v1.0.18) (2018-06-29)
+
+
+### Bug Fixes
+
+* add tslib ([6e133f1](https://github.com/oclif/plugin-legacy/commit/6e133f1))
+
 ## [1.0.17](https://github.com/oclif/plugin-legacy/compare/v1.0.16...v1.0.17) (2018-06-29)
 
 
