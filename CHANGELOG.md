@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/oclif/plugin-legacy/compare/v1.0.18...v1.1.0) (2018-08-17)
+
+
+### Features
+
+* typescript 3.0 ([2abe481](https://github.com/oclif/plugin-legacy/commit/2abe481))
+
 ## [1.0.18](https://github.com/oclif/plugin-legacy/compare/v1.0.17...v1.0.18) (2018-06-29)
 
 
