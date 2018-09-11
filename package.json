@@ -9,7 +9,7 @@
     "@oclif/color": "^0.0.0",
     "@oclif/command": "^1.5.0",
     "ansi-escapes": "^3.1.0",
-    "debug": "^3.1.0",
+    "debug": "^4.0.0",
     "semver": "^5.5.1",
     "tslib": "^1.9.3"
   },
