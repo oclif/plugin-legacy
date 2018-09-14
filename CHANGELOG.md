@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/oclif/plugin-legacy/compare/v1.1.0...v1.1.1) (2018-09-14)
+
+
+### Bug Fixes
+
+* updated linter rules ([940232e](https://github.com/oclif/plugin-legacy/commit/940232e))
+
 # [1.1.0](https://github.com/oclif/plugin-legacy/compare/v1.0.18...v1.1.0) (2018-08-17)
 
 
