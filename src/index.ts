@@ -22,12 +22,12 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
 
   get topics(): Config.Topic[] {
     return super.topics
-    .concat(this.moduleTopics)
+      .concat(this.moduleTopics)
   }
 
   get commandIDs(): string[] {
     return super.commandIDs
-    .concat(this.moduleCommands.map(c => c.id))
+      .concat(this.moduleCommands.map(c => c.id))
   }
 
   findCommand(id: string, opts: {must: true}): Config.Command.Class
