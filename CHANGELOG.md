@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/oclif/plugin-legacy/compare/v1.1.1...v1.1.2) (2018-10-13)
+
+
+### Bug Fixes
+
+* remove greenkeeper badge ([74f0bc9](https://github.com/oclif/plugin-legacy/commit/74f0bc9))
+
 ## [1.1.1](https://github.com/oclif/plugin-legacy/compare/v1.1.0...v1.1.1) (2018-09-14)
 
 
