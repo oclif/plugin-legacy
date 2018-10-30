@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/oclif/plugin-legacy.git/compare/v1.1.2...v1.1.3) (2018-10-30)
+
+
+### Bug Fixes
+
+* include flag completion property ([#21](https://github.com/oclif/plugin-legacy.git/issues/21)) ([76b897f](https://github.com/oclif/plugin-legacy.git/commit/76b897f))
+
 ## [1.1.2](https://github.com/oclif/plugin-legacy/compare/v1.1.1...v1.1.2) (2018-10-13)
 
 
