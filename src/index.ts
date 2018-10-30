@@ -146,7 +146,7 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
             hidden: flag.hidden,
             required: flag.required || flag.optional === false,
             parse: flag.parse,
-            completion: flags.completion,
+            completion: flag.completion,
           }
           for (let [k, v] of Object.entries(opts)) {
             if (v === undefined) delete (opts as any)[k]
