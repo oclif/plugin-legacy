@@ -11,7 +11,7 @@
     "ansi-escapes": "^3.1.0",
     "debug": "^4.1.0",
     "semver": "^7.3.2",
-    "tslib": "^1.9.3"
+    "tslib": "^2.0.0"
   },
   "devDependencies": {
     "@heroku-cli/plugin-apps": "^2.6.0",
