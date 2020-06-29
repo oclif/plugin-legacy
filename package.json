@@ -33,7 +33,7 @@
     "heroku-apps": "^2.4.22",
     "heroku-status": "^3.0.10",
     "mocha": "^5.2.0",
-    "nyc": "^13.0.1",
+    "nyc": "^15.1.0",
     "ts-node": "^8.10.2",
     "typescript": "^3.1.3"
   },
