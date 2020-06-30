@@ -210,16 +210,16 @@
     tslib "^1.9.3"
 
 "@heroku-cli/command@^8.1.20", "@heroku-cli/command@^8.2.0":
-  version "8.2.11"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/command/-/command-8.2.11.tgz#80a92dae7b4afe1da26bb6b8116f7f7f0837e73d"
-  integrity sha512-eZo4Tln1Fr2wql6WE5Z2ckGsHLwXeBE+JA+ibc8UBlLHprX6JVstufPpTKtgcZw+Y5II54ChdRx/e/ExflPBCg==
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/command/-/command-8.3.0.tgz#bc3920454fcce7e1cc94a78614f2fa1379e977ce"
+  integrity sha512-gQoe6KnIr8q+JCYvO/6STRBsJXHw+UwwtNs5me5Zx/020u2S1I4oqi3KamcTeRTC7ZVORH3DfE30aA3HNgYXsA==
   dependencies:
     "@heroku-cli/color" "^1.1.14"
     "@oclif/errors" "^1.2.2"
     cli-ux "^4.9.3"
     debug "^4.1.1"
     fs-extra "^7.0.1"
-    heroku-client "^3.0.7"
+    heroku-client "^3.1.0"
     http-call "^5.2.4"
     netrc-parser "^3.1.6"
     open "^6.2.0"
@@ -2213,10 +2213,10 @@ heroku-client@3.0.2:
     is-retry-allowed "^1.0.0"
     tunnel-agent "^0.4.0"
 
-heroku-client@^3.0.5, heroku-client@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/heroku-client/-/heroku-client-3.0.7.tgz#abf4fe47cf88814ba1e16a1409999b92a5f6f99d"
-  integrity sha512-wL8d3ufIWGzL8B2U7oPzN+SdcMt6LPqA/x4nb9pDG45IXpr8KO+N4dvX4Vycgn0WrJVDfQnQ1juctJsUwuoeww==
+heroku-client@^3.0.5, heroku-client@^3.0.7, heroku-client@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/heroku-client/-/heroku-client-3.1.0.tgz#7e3f6804d18a6ee9e3a774ff8bc9861b9b1a4725"
+  integrity sha512-UfGKwUm5duzzSVI8uUXlNAE1mus6uPxmZPji4vuG1ArV5DYL1rXsZShp0OoxraWdEwYoxCUrM6KGztC68x5EZQ==
   dependencies:
     is-retry-allowed "^1.0.0"
     tunnel-agent "^0.6.0"
