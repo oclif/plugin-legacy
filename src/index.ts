@@ -35,6 +35,12 @@ function convertFlagsFromV5(Flags: any, flags: any): any {
   )
 }
 
+type LegacyFlags = {
+  app?: string;
+  org?: string;
+  team?: string;
+}
+
 export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
   _base = `${pjson.name}@${pjson.version}`
 
@@ -152,9 +158,9 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
           debugHeaders: this.config.debug > 1 || ['1', 'true'].includes((process as any).env.HEROKU_DEBUG_HEADERS),
           flags,
           args: c.variableArgs ? argv : args,
-          app: flags.app,
-          org: flags.org,
-          team: flags.team,
+          app: (flags as LegacyFlags).app,
+          org: (flags as LegacyFlags).org,
+          team: (flags as LegacyFlags).team,
           config: this.config,
           apiUrl: vars.apiUrl,
           herokuDir: this.config.cacheDir,
