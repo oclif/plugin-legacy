@@ -14,7 +14,7 @@
     "tslib": "^2.0.0"
   },
   "devDependencies": {
-    "@heroku-cli/plugin-apps": "^2.6.0",
+    "@heroku-cli/plugin-apps": "^7.42.0",
     "@oclif/config": "^1.8.8",
     "@oclif/dev-cli": "^1.19.2",
     "@oclif/errors": "^1.2.2",
