@@ -194,9 +194,9 @@
     tslib "^1.9.3"
 
 "@heroku-cli/command@^8.2.0", "@heroku-cli/command@^8.3.1":
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/command/-/command-8.3.1.tgz#62dd00ecdb041ea088c820f75c3218baea19b65e"
-  integrity sha512-I6ZQkj4FG9C3DVUITE8WOSuHTtOQjyMRXDbrXoudu2xLK6zQBDV4MpDrmZbn+UKD0+TssgsIusfXOL6cWpYqQw==
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/command/-/command-8.3.2.tgz#6057fbb905d7d471b5c4e33c07a0acf0b0968cf7"
+  integrity sha512-fRkdy9fU5+ZaZHAvMG32uNACyeA0zenmhvH3b6cScQGfPZEmOm66VfVOPy8jZjVZYtZQrS9VqxabbeYtPx8XwQ==
   dependencies:
     "@heroku-cli/color" "^1.1.14"
     "@oclif/errors" "^1.2.2"
@@ -2279,15 +2279,7 @@ heroku-client@3.0.2:
     is-retry-allowed "^1.0.0"
     tunnel-agent "^0.4.0"
 
-heroku-client@^3.0.5:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/heroku-client/-/heroku-client-3.0.7.tgz#abf4fe47cf88814ba1e16a1409999b92a5f6f99d"
-  integrity sha512-wL8d3ufIWGzL8B2U7oPzN+SdcMt6LPqA/x4nb9pDG45IXpr8KO+N4dvX4Vycgn0WrJVDfQnQ1juctJsUwuoeww==
-  dependencies:
-    is-retry-allowed "^1.0.0"
-    tunnel-agent "^0.6.0"
-
-heroku-client@^3.1.0:
+heroku-client@^3.0.5, heroku-client@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/heroku-client/-/heroku-client-3.1.0.tgz#7e3f6804d18a6ee9e3a774ff8bc9861b9b1a4725"
   integrity sha512-UfGKwUm5duzzSVI8uUXlNAE1mus6uPxmZPji4vuG1ArV5DYL1rXsZShp0OoxraWdEwYoxCUrM6KGztC68x5EZQ==
