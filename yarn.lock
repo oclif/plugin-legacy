@@ -193,10 +193,10 @@
     supports-color "^5.5.0"
     tslib "^1.9.3"
 
-"@heroku-cli/command@^8.2.0", "@heroku-cli/command@^8.3.1":
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/command/-/command-8.3.1.tgz#62dd00ecdb041ea088c820f75c3218baea19b65e"
-  integrity sha512-I6ZQkj4FG9C3DVUITE8WOSuHTtOQjyMRXDbrXoudu2xLK6zQBDV4MpDrmZbn+UKD0+TssgsIusfXOL6cWpYqQw==
+"@heroku-cli/command@^8.2.0", "@heroku-cli/command@^8.4.0":
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/command/-/command-8.4.0.tgz#3f977eeadfb3aacbe79172644f1fee8040893cae"
+  integrity sha512-TN4v5VYIJeLizhNBwP3bDKrUQLdriGVSDRT55/Il2Dyg9i8hkoUQURckcGv0H/MS2oissqCGXfNzNZu2VRbC2Q==
   dependencies:
     "@heroku-cli/color" "^1.1.14"
     "@oclif/errors" "^1.2.2"
@@ -207,14 +207,15 @@
     http-call "^5.2.4"
     netrc-parser "^3.1.6"
     open "^6.2.0"
+    uuid "^8.3.0"
 
 "@heroku-cli/plugin-apps@^7.42.0":
-  version "7.42.8"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-apps/-/plugin-apps-7.42.8.tgz#0bbe80065ff38211ea8032bbb743b43b804717a3"
-  integrity sha512-U7iX/0JCzXY/3W1QOOijRk0nPGBViylrUt4Ga/n9SyHrQdymOSPznmWqWrZuZbsowTAwSPaEioscHH3oqQ1MHw==
+  version "7.43.0"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-apps/-/plugin-apps-7.43.0.tgz#c1205258022bf7f971c2b97cb99995d1886fcbd1"
+  integrity sha512-x3rxroxbaUQnkmLl1GWAwBPd0EkbZHa94IkcPTZ+nniXxekj7PsJC5b6sbclRgwz4Qw10eNm+3Av4t0NitOglg==
   dependencies:
     "@heroku-cli/color" "^1.1.14"
-    "@heroku-cli/command" "^8.3.1"
+    "@heroku-cli/command" "^8.4.0"
     "@heroku-cli/schema" "^1.0.25"
     "@oclif/command" "^1"
     "@oclif/config" "^1"
@@ -4622,6 +4623,11 @@ uuid@^3.3.3:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+uuid@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
+  integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
 
 v8-compile-cache@^2.0.3:
   version "2.1.0"
