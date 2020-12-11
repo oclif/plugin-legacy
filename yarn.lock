@@ -194,9 +194,9 @@
     tslib "^1.9.3"
 
 "@heroku-cli/command@^8.2.0", "@heroku-cli/command@^8.3.1":
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/command/-/command-8.3.1.tgz#62dd00ecdb041ea088c820f75c3218baea19b65e"
-  integrity sha512-I6ZQkj4FG9C3DVUITE8WOSuHTtOQjyMRXDbrXoudu2xLK6zQBDV4MpDrmZbn+UKD0+TssgsIusfXOL6cWpYqQw==
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/command/-/command-8.4.0.tgz#3f977eeadfb3aacbe79172644f1fee8040893cae"
+  integrity sha512-TN4v5VYIJeLizhNBwP3bDKrUQLdriGVSDRT55/Il2Dyg9i8hkoUQURckcGv0H/MS2oissqCGXfNzNZu2VRbC2Q==
   dependencies:
     "@heroku-cli/color" "^1.1.14"
     "@oclif/errors" "^1.2.2"
@@ -207,6 +207,7 @@
     http-call "^5.2.4"
     netrc-parser "^3.1.6"
     open "^6.2.0"
+    uuid "^8.3.0"
 
 "@heroku-cli/plugin-apps@^7.42.0":
   version "7.42.8"
@@ -2279,15 +2280,7 @@ heroku-client@3.0.2:
     is-retry-allowed "^1.0.0"
     tunnel-agent "^0.4.0"
 
-heroku-client@^3.0.5:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/heroku-client/-/heroku-client-3.0.7.tgz#abf4fe47cf88814ba1e16a1409999b92a5f6f99d"
-  integrity sha512-wL8d3ufIWGzL8B2U7oPzN+SdcMt6LPqA/x4nb9pDG45IXpr8KO+N4dvX4Vycgn0WrJVDfQnQ1juctJsUwuoeww==
-  dependencies:
-    is-retry-allowed "^1.0.0"
-    tunnel-agent "^0.6.0"
-
-heroku-client@^3.1.0:
+heroku-client@^3.0.5, heroku-client@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/heroku-client/-/heroku-client-3.1.0.tgz#7e3f6804d18a6ee9e3a774ff8bc9861b9b1a4725"
   integrity sha512-UfGKwUm5duzzSVI8uUXlNAE1mus6uPxmZPji4vuG1ArV5DYL1rXsZShp0OoxraWdEwYoxCUrM6KGztC68x5EZQ==
@@ -4623,15 +4616,15 @@ util-deprecate@~1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
-uuid@^3.1.0:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
-  integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
-
-uuid@^3.3.3:
+uuid@^3.1.0, uuid@^3.3.3:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+uuid@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
+  integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
 
 v8-compile-cache@^2.0.3:
   version "2.1.0"
