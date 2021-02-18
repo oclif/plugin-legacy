@@ -5,7 +5,7 @@
   "author": "Jeff Dickey @jdxcode",
   "bugs": "https://github.com/oclif/plugin-legacy/issues",
   "dependencies": {
-    "@heroku-cli/command": "^8.2.0",
+    "@heroku-cli/command": "^8.4.1",
     "@oclif/color": "^0.0.0",
     "@oclif/command": "^1.5.4",
     "ansi-escapes": "^4.3.1",
