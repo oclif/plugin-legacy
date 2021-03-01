@@ -209,22 +209,6 @@
     supports-color "^5.5.0"
     tslib "^1.9.3"
 
-"@heroku-cli/command@^8.4.0":
-  version "8.4.0"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/command/-/command-8.4.0.tgz#3f977eeadfb3aacbe79172644f1fee8040893cae"
-  integrity sha512-TN4v5VYIJeLizhNBwP3bDKrUQLdriGVSDRT55/Il2Dyg9i8hkoUQURckcGv0H/MS2oissqCGXfNzNZu2VRbC2Q==
-  dependencies:
-    "@heroku-cli/color" "^1.1.14"
-    "@oclif/errors" "^1.2.2"
-    cli-ux "^4.9.3"
-    debug "^4.1.1"
-    fs-extra "^7.0.1"
-    heroku-client "^3.1.0"
-    http-call "^5.2.4"
-    netrc-parser "^3.1.6"
-    open "^6.2.0"
-    uuid "^8.3.0"
-
 "@heroku-cli/command@^8.4.1":
   version "8.4.1"
   resolved "https://registry.yarnpkg.com/@heroku-cli/command/-/command-8.4.1.tgz#7efe7f7f2a368369108f12540760fe67405a517c"
@@ -242,12 +226,12 @@
     uuid "^8.3.0"
 
 "@heroku-cli/plugin-apps@^7.42.0":
-  version "7.47.5"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-apps/-/plugin-apps-7.47.5.tgz#4fca80eb2b3de7415d88cafde30123789c62e473"
-  integrity sha512-ZSa0sJ0X3YZ2yfivGQxGZ8SeRSaN338rSbpsD3Fxh6te8AB3uenrnnvl/Ii25vKT0DFBhElBaiGUkFKi3Nrmaw==
+  version "7.47.13"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-apps/-/plugin-apps-7.47.13.tgz#d06055dca7c3dc2ffec58a164985fa3c4944189a"
+  integrity sha512-9+OF3IvYbPqv8qyuhQaHRSjrVMUj+rP/U+/GItDjGUv1X3sS8TvkljTndxKlsZ5VYaznkXy5UQDwaIEEC4VSOA==
   dependencies:
     "@heroku-cli/color" "^1.1.14"
-    "@heroku-cli/command" "^8.4.0"
+    "@heroku-cli/command" "^8.4.1"
     "@heroku-cli/schema" "^1.0.25"
     "@oclif/command" "^1"
     "@oclif/config" "^1"
