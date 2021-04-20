@@ -3490,9 +3490,9 @@ nice-try@^1.0.4:
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
 nock@*, nock@^13.0.0:
-  version "13.0.9"
-  resolved "https://registry.yarnpkg.com/nock/-/nock-13.0.9.tgz#32b9f6408a71991b25f044109cac92ee556c8539"
-  integrity sha512-SoGx/J0SsZPOdBFrBC9PP6NwaEgOBQIRPbsOsO9q+OwOPWc5eT6wALSxn3ZNE4Fv2ImIUXM4Hv/07rjq/uWDew==
+  version "13.0.11"
+  resolved "https://registry.yarnpkg.com/nock/-/nock-13.0.11.tgz#ba733252e720897ca50033205c39db0c7470f331"
+  integrity sha512-sKZltNkkWblkqqPAsjYW0bm3s9DcHRPiMOyKO/PkfJ+ANHZ2+LA2PLe22r4lLrKgXaiSaDQwW3qGsJFtIpQIeQ==
   dependencies:
     debug "^4.1.0"
     json-stringify-safe "^5.0.1"
@@ -4732,15 +4732,15 @@ type-detect@^4.0.0, type-detect@^4.0.5:
   resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-4.0.8.tgz#7646fb5f18871cfbb7749e69bd39a6388eb7450c"
   integrity sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==
 
-type-fest@^0.21.3:
-  version "0.21.3"
-  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.21.3.tgz#d260a24b0198436e133fa26a524a6d65fa3b2e37"
-  integrity sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==
-
 type-fest@^0.20.2:
   version "0.20.2"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.20.2.tgz#1bf207f4b28f91583666cb5fbd327887301cd5f4"
   integrity sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==
+
+type-fest@^0.21.3:
+  version "0.21.3"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.21.3.tgz#d260a24b0198436e133fa26a524a6d65fa3b2e37"
+  integrity sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==
 
 type-fest@^0.3.0:
   version "0.3.1"
