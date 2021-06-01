@@ -230,9 +230,9 @@
     uuid "^8.3.0"
 
 "@heroku-cli/plugin-apps@^7.42.0":
-  version "7.47.13"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-apps/-/plugin-apps-7.47.13.tgz#d06055dca7c3dc2ffec58a164985fa3c4944189a"
-  integrity sha512-9+OF3IvYbPqv8qyuhQaHRSjrVMUj+rP/U+/GItDjGUv1X3sS8TvkljTndxKlsZ5VYaznkXy5UQDwaIEEC4VSOA==
+  version "7.54.0"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-apps/-/plugin-apps-7.54.0.tgz#d054f4b9327b8a59e0c3b58944e0b1e25bd3ad13"
+  integrity sha512-7t359VN0lgdcXMaz+n/zMa8Zs0dXNc5CUx2EUyo3Y5OKe9vcROjj0oonJYRaC9eO0QHtv4g7qaMxua+Ytzq6gg==
   dependencies:
     "@heroku-cli/color" "^1.1.14"
     "@heroku-cli/command" "^8.4.1"
