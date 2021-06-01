@@ -214,9 +214,9 @@
     tslib "^1.9.3"
 
 "@heroku-cli/command@^8.4.1":
-  version "8.4.1"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/command/-/command-8.4.1.tgz#7efe7f7f2a368369108f12540760fe67405a517c"
-  integrity sha512-B8Jg0FtlxNnkRYepzMcAsq17uTxQlg8NubiQKKtlertJmvBUJ2QoBczhsHCc4wuXSlraVhTgRnfT77fZ8bqROw==
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/command/-/command-8.5.0.tgz#1a9d977c85d5581622699d9a819d6da24a037993"
+  integrity sha512-HtjnammJPaoYkcrhmQM5sJCUueJ80KbZHUo3SldAEXmy9hefk34mk524nKS7ZlrABEiBilv4XYHCkrWCoq94uQ==
   dependencies:
     "@heroku-cli/color" "^1.1.14"
     "@oclif/errors" "^1.2.2"
