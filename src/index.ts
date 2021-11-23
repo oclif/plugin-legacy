@@ -152,7 +152,7 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
         const {flags, argv, args} = this.parse(this.constructor as any)
         const ctx: any = {
           version: this.config.userAgent,
-          supportsColor: color.enabled,
+          supportsColor: Boolean(color.supports.stdout),
           auth: {},
           debug: Boolean(this.config.debug),
           debugHeaders: this.config.debug > 1 || ['1', 'true'].includes((process as any).env.HEROKU_DEBUG_HEADERS),
