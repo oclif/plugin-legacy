@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/oclif/plugin-legacy/compare/v1.2.3...v1.2.4) (2021-12-01)
+
+
+### Bug Fixes
+
+* more dep bumps ([d34be43](https://github.com/oclif/plugin-legacy/commit/d34be4345e9c11838ab5b449d4cda587f692419a))
+
 ## [1.2.3](https://github.com/oclif/plugin-legacy/compare/v1.2.2...v1.2.3) (2021-12-01)
 
 
