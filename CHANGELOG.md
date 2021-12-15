@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/oclif/plugin-legacy/compare/v1.2.6...v1.2.7) (2021-12-15)
+
+
+### Bug Fixes
+
+* remove trainsient dep on lodash.template ([cd43ce9](https://github.com/oclif/plugin-legacy/commit/cd43ce9cc442b3276ee08299313a412cfc42a0cd))
+
 ## [1.2.6](https://github.com/oclif/plugin-legacy/compare/v1.2.5...v1.2.6) (2021-12-08)
 
 
