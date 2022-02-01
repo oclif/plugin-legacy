@@ -6,7 +6,7 @@
   "bugs": "https://github.com/oclif/plugin-legacy/issues",
   "dependencies": {
     "@heroku-cli/command": "^8.5.0",
-    "@oclif/color": "^0.1.2",
+    "@oclif/color": "^1.0.1",
     "@oclif/command": "1.8.15",
     "ansi-escapes": "^4.3.2",
     "debug": "^4.3.3",
