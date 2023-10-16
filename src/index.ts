@@ -1,9 +1,10 @@
+/* eslint-disable unicorn/prefer-spread */
 import * as HCli from '@heroku-cli/command'
 import {color as Color} from '@oclif/color'
-import * as Config from '@oclif/config'
-import * as path from 'path'
+import {Command, Interfaces, Plugin} from '@oclif/core'
+import * as path from 'node:path'
+import {inspect} from 'node:util'
 import * as Semver from 'semver'
-import {inspect} from 'util'
 
 import {compact} from './util'
 
@@ -13,87 +14,67 @@ const pjson = require('../package.json')
 function convertFlagsFromV5(Flags: any, flags: any): any {
   if (!flags) return {}
   if (!Array.isArray(flags)) return flags
-  return flags.reduce(
-    (flags, flag) => {
-      const opts = {
-        char: flag.char,
-        description: flag.description,
-        hidden: flag.hidden,
-        required: flag.required || flag.optional === false,
-        parse: flag.parse,
-        completion: flag.completion,
-        default: flag.default,
-      }
-      for (const [k, v] of Object.entries(opts)) {
-        if (v === undefined) delete (opts as any)[k]
-      }
-      if (!opts.parse) delete opts.parse
-      flags[flag.name] = flag.hasValue ? Flags.string(opts as any) : Flags.boolean(opts as any)
-      return flags
-    },
-    {} as any,
-  )
+  // eslint-disable-next-line unicorn/no-array-reduce
+  return flags.reduce((flags, flag) => {
+    const opts = {
+      char: flag.char,
+      completion: flag.completion,
+      default: flag.default,
+      description: flag.description,
+      hidden: flag.hidden,
+      parse: flag.parse,
+      required: flag.required || flag.optional === false,
+    }
+    for (const [k, v] of Object.entries(opts)) {
+      if (v === undefined) delete (opts as any)[k]
+    }
+
+    if (!opts.parse) delete opts.parse
+    flags[flag.name] = flag.hasValue ? Flags.string(opts as any) : Flags.boolean(opts as any)
+    return flags
+  }, {} as any)
 }
 
 type LegacyFlags = {
-  app?: string;
-  org?: string;
-  team?: string;
+  app?: string
+  org?: string
+  team?: string
 }
 
-export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
+export class PluginLegacy extends Plugin implements Interfaces.Plugin {
   _base = `${pjson.name}@${pjson.version}`
 
-  protected _moduleCommands?: Config.Command.Class[]
+  protected _moduleCommands?: Command.Class[]
 
-  protected _moduleTopics?: Config.Topic[]
+  protected _moduleTopics?: Interfaces.Topic[]
 
-  constructor(public config: Config.IConfig, public base: Config.IPlugin) {
+  constructor(
+    public config: Interfaces.Config,
+    public base: Interfaces.Plugin,
+  ) {
     super(base)
     debug('loading legacy plugin', base.root)
   }
 
-  get topics(): Config.Topic[] {
-    return super.topics
-    .concat(this.moduleTopics)
-  }
-
   get commandIDs(): string[] {
-    return super.commandIDs
-    .concat(this.moduleCommands.map(c => c.id))
+    return super.commandIDs.concat(this.moduleCommands.map((c) => c.id))
   }
 
-  findCommand(id: string, opts: {must: true}): Config.Command.Class
-
-  findCommand(id: string, opts?: {must?: boolean}): Config.Command.Class | undefined
-
-  findCommand(id: string, opts: {must?: boolean} = {}) {
-    let cmd = super.findCommand(id)
-    if (cmd) return this.convertCommand(cmd)
-    cmd = this.moduleCommands.find(c => c.id === id)
-    if (cmd) {
-      cmd.plugin = this
-      return this.convertCommand(cmd)
-    }
-    if (opts.must) throw new Error(`command ${id} not found`)
-  }
-
-  protected get moduleCommands(): Config.Command.Class[] {
+  protected get moduleCommands(): Command.Class[] {
     if (this._moduleCommands) return this._moduleCommands
-    const main = this.pjson.main
+    const {main} = this.pjson
     if (!main) return []
     const module = require(path.join(this.root, main))
     if (!module.commands) return []
     debug('loading module commands', this.root)
-    this._moduleCommands = module.commands
-    .map((c: any) => this.convertCommand(c))
+    this._moduleCommands = module.commands.map((c: any) => this.convertCommand(c))
     return this._moduleCommands!
   }
 
-  protected get moduleTopics(): Config.Topic[] {
+  protected get moduleTopics(): Interfaces.Topic[] {
     if (this.pjson.oclif.topics) return []
     if (this._moduleTopics) return this._moduleTopics
-    const main = this.pjson.main
+    const {main} = this.pjson
     if (!main) return []
     const module = require(path.join(this.root, main))
     if (!module.commands) return []
@@ -102,17 +83,32 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
     return this._moduleTopics!
   }
 
-  private convertCommand(c: any): Config.Command.Class {
+  get topics(): Interfaces.Topic[] {
+    return super.topics.concat(this.moduleTopics)
+  }
+
+  async findCommand(id: string, opts: {must: true}): Promise<Command.Class>
+
+  async findCommand(id: string, opts?: {must?: boolean}): Promise<Command.Class | undefined>
+
+  async findCommand(id: string, opts: {must?: boolean} = {}): Promise<Command.Class | undefined> {
+    let cmd = await super.findCommand(id)
+    if (cmd) return this.convertCommand(cmd)
+    cmd = this.moduleCommands.find((c) => c.id === id)
+    if (cmd) {
+      cmd.plugin = this
+      return this.convertCommand(cmd)
+    }
+
+    if (opts.must) throw new Error(`command ${id} not found`)
+  }
+
+  private convertCommand(c: any): Command.Class {
     if (this.isICommand(c)) return this.convertFromICommand(c)
     if (this.isV5Command(c)) return this.convertFromV5(c)
     if (this.isFlowCommand(c)) return this.convertFromFlow(c)
     debug(c)
     throw new Error(`Invalid command: ${inspect(c)}`)
-  }
-
-  private convertFromICommand(c: any): any {
-    if (!c.id) c.id = compact([c.topic, c.command]).join(':')
-    return c
   }
 
   private convertFromFlow(c: any): any {
@@ -121,54 +117,60 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
     return c
   }
 
+  private convertFromICommand(c: any): any {
+    if (!c.id) c.id = compact([c.topic, c.command]).join(':')
+    return c
+  }
+
   private convertFromV5(c: any): any {
     const {Command, flags: Flags, vars} = require('@heroku-cli/command') as typeof HCli
     class V5 extends Command {
-      static id = compact([c.topic, c.command]).join(':')
+      static aliases = c.aliases || []
 
-      static description = [c.description, c.help].join('\n')
-
-      static hidden = Boolean(c.hidden)
-
+      // eslint-disable-next-line unicorn/consistent-function-scoping
       static args = (c.args || []).map((a: any) => ({
         ...a,
         required: a.required !== false && !(a as any).optional,
       }))
 
-      static flags = convertFlagsFromV5(Flags, c.flags)
-
-      static strict = c.strict || !c.variableArgs
-
-      static help = c.help
-
-      static aliases = c.aliases || []
-
-      static usage = c.usage
+      static description = [c.description, c.help].join('\n')
 
       static examples = c.examples || c.example
 
+      static flags = convertFlagsFromV5(Flags, c.flags)
+
+      static help = c.help
+
+      static hidden = Boolean(c.hidden)
+
+      static id = compact([c.topic, c.command]).join(':')
+
+      static strict = c.strict || !c.variableArgs
+
+      static usage = c.usage
+
       async run() {
         const color: typeof Color = require('@oclif/color').default
-        const {flags, argv, args} = this.parse(this.constructor as any)
+        const {args, argv, flags} = this.parse(this.constructor as any)
         const ctx: any = {
-          version: this.config.userAgent,
-          supportsColor: Boolean(color.supports.stdout),
+          apiHost: vars.apiHost,
+          apiToken: this.heroku.auth,
+          apiUrl: vars.apiUrl,
+          app: (flags as LegacyFlags).app,
+          args: c.variableArgs ? argv : args,
           auth: {},
+          config: this.config,
+          cwd: process.cwd(),
           debug: Boolean(this.config.debug),
           debugHeaders: this.config.debug > 1 || ['1', 'true'].includes((process as any).env.HEROKU_DEBUG_HEADERS),
           flags,
-          args: c.variableArgs ? argv : args,
-          app: (flags as LegacyFlags).app,
-          org: (flags as LegacyFlags).org,
-          team: (flags as LegacyFlags).team,
-          config: this.config,
-          apiUrl: vars.apiUrl,
-          herokuDir: this.config.cacheDir,
-          apiToken: this.heroku.auth,
-          apiHost: vars.apiHost,
           gitHost: vars.gitHost,
+          herokuDir: this.config.cacheDir,
           httpGitHost: vars.httpGitHost,
-          cwd: process.cwd(),
+          org: (flags as LegacyFlags).org,
+          supportsColor: Boolean(color.supports.stdout),
+          team: (flags as LegacyFlags).team,
+          version: this.config.userAgent,
         }
         ctx.auth.password = ctx.apiToken
         const ansi = require('ansi-escapes')
@@ -185,12 +187,20 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
       V5.flags.app = Flags.app({required: Boolean(c.needsApp)})
       V5.flags.remote = Flags.remote()
     }
+
     if (c.needsOrg || c.wantsOrg) {
-      const opts = {required: Boolean(c.needsOrg), hidden: false, description: 'team to use'}
+      const opts = {description: 'team to use', hidden: false, required: Boolean(c.needsOrg)}
       V5.flags.team = Flags.team(opts)
       V5.flags.org = Flags.team({char: 'o', hidden: true})
     }
+
     return V5
+  }
+
+  private isFlowCommand(command: any): any {
+    const c = command as any
+    return typeof c === 'function'
+    // if (c._version && deps.semver.lt(c._version, '11.0.0')) return true
   }
 
   private isICommand(c: any) {
@@ -202,11 +212,5 @@ export class PluginLegacy extends Config.Plugin implements Config.IPlugin {
   private isV5Command(command: any): any {
     const c = command
     return Boolean(typeof c === 'object')
-  }
-
-  private isFlowCommand(command: any): any {
-    const c = command as any
-    return typeof c === 'function'
-    // if (c._version && deps.semver.lt(c._version, '11.0.0')) return true
   }
 }
