@@ -1,3 +1,12 @@
+## [1.3.4](https://github.com/oclif/plugin-legacy/compare/1.3.3...1.3.4) (2023-10-17)
+
+
+### Bug Fixes
+
+* **deps:** bump thenify from 3.3.0 to 3.3.1 ([#306](https://github.com/oclif/plugin-legacy/issues/306)) ([81fba87](https://github.com/oclif/plugin-legacy/commit/81fba8717dd993740416920cbcd4b78d5a91125d))
+
+
+
 ## [1.3.3](https://github.com/oclif/plugin-legacy/compare/1.3.2...1.3.3) (2023-10-17)
 
 
