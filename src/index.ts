@@ -2,9 +2,9 @@
 import * as HCli from '@heroku-cli/command'
 import {color as Color} from '@oclif/color'
 import {Command, Interfaces, Plugin} from '@oclif/core'
-import * as path from 'node:path'
-import {inspect} from 'node:util'
+import * as path from 'path'
 import * as Semver from 'semver'
+import {inspect} from 'util'
 
 import {compact} from './util'
 
