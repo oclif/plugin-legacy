@@ -1,3 +1,12 @@
+## [1.3.2](https://github.com/oclif/plugin-legacy/compare/1.3.1...1.3.2) (2023-10-17)
+
+
+### Bug Fixes
+
+* **deps:** bump @babel/traverse from 7.10.3 to 7.23.2 ([#302](https://github.com/oclif/plugin-legacy/issues/302)) ([fdfd261](https://github.com/oclif/plugin-legacy/commit/fdfd261fa99a5bc21232baf92b2e9c60f9c6276d))
+
+
+
 ## [1.3.1](https://github.com/oclif/plugin-legacy/compare/1.3.0...1.3.1) (2023-10-17)
 
 
