@@ -1,3 +1,12 @@
+## [1.3.5](https://github.com/oclif/plugin-legacy/compare/1.3.4...1.3.5) (2023-10-18)
+
+
+### Bug Fixes
+
+* **deps:** bump word-wrap from 1.2.3 to 1.2.5 ([#300](https://github.com/oclif/plugin-legacy/issues/300)) ([95dee37](https://github.com/oclif/plugin-legacy/commit/95dee375ea496d0eeccbfea41d7895ebddbbaa24))
+
+
+
 ## [1.3.4](https://github.com/oclif/plugin-legacy/compare/1.3.3...1.3.4) (2023-10-17)
 
 
