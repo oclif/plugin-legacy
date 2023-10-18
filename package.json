@@ -5,7 +5,6 @@
   "author": "Salesforce",
   "bugs": "https://github.com/oclif/plugin-legacy/issues",
   "dependencies": {
-    "@heroku-cli/command": "^8.5.0",
     "@oclif/color": "^1.0.12",
     "@oclif/core": "^3.3.1",
     "ansi-escapes": "^4.3.2",
@@ -42,6 +41,9 @@
     "prettier": "^3.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "@heroku-cli/command": "*"
   },
   "engines": {
     "node": ">=8.0.0"
