@@ -1,3 +1,12 @@
+## [1.3.6](https://github.com/oclif/plugin-legacy/compare/1.3.5...1.3.6) (2023-10-22)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/command from 1.8.15 to 1.8.36 ([#308](https://github.com/oclif/plugin-legacy/issues/308)) ([5338f07](https://github.com/oclif/plugin-legacy/commit/5338f0708f633d29a3b74ac1a28c42f8bc0592b5))
+
+
+
 ## [1.3.5](https://github.com/oclif/plugin-legacy/compare/1.3.4...1.3.5) (2023-10-18)
 
 
