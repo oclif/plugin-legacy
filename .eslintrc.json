@@ -1,0 +1,9 @@
+{
+  "extends": ["oclif", "oclif-typescript", "prettier"],
+  "rules": {
+    "unicorn/prefer-module": "off",
+    "unicorn/import-style": "off",
+    "unicorn/prefer-node-protocol": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  }
+}
