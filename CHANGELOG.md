@@ -1,3 +1,25 @@
+# [2.0.0](https://github.com/oclif/plugin-legacy/compare/1.3.6...2.0.0) (2023-10-24)
+
+- feat!: use core v3 (#304) ([71f7a99](https://github.com/oclif/plugin-legacy/commit/71f7a991742dc7f2ee245f4483988256d6ca55c7)), closes [#304](https://github.com/oclif/plugin-legacy/issues/304)
+
+### BREAKING CHANGES
+
+- no longer support oclif/config based CLIs
+
+- chore: major version bump
+
+- chore(release): 2.0.0-beta.1 [skip ci]
+
+- chore: linting
+
+- chore: yarn.lock
+
+- chore: move heroku-cli/command to peerDeps
+
+- chore(release): 2.0.0-beta.2 [skip ci]
+
+- chore: bump oclif/core
+
 ## [1.3.6](https://github.com/oclif/plugin-legacy/compare/1.3.5...1.3.6) (2023-10-22)
 
 ### Bug Fixes
