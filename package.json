@@ -12,7 +12,7 @@
     "semver": "^7.5.4"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.8.0",
+    "@commitlint/config-conventional": "^17.8.1",
     "@heroku-cli/plugin-apps": "^7.59.1",
     "@heroku-cli/plugin-status": "5.0.10",
     "@oclif/plugin-help": "^6",
