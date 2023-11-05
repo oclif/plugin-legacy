@@ -1,3 +1,9 @@
+## [2.0.2](https://github.com/oclif/plugin-legacy/compare/2.0.1...2.0.2) (2023-11-05)
+
+### Bug Fixes
+
+- **deps:** bump ansi-regex from 3.0.0 to 3.0.1 ([#316](https://github.com/oclif/plugin-legacy/issues/316)) ([cb8c7b8](https://github.com/oclif/plugin-legacy/commit/cb8c7b885446c1402847878f9c9f2ea537899240))
+
 ## [2.0.1](https://github.com/oclif/plugin-legacy/compare/2.0.0...2.0.1) (2023-11-05)
 
 ### Bug Fixes
