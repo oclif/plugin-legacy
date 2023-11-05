@@ -1,3 +1,9 @@
+## [2.0.1](https://github.com/oclif/plugin-legacy/compare/2.0.0...2.0.1) (2023-11-05)
+
+### Bug Fixes
+
+- **deps:** bump @oclif/color from 1.0.12 to 1.0.13 ([#315](https://github.com/oclif/plugin-legacy/issues/315)) ([6e7019a](https://github.com/oclif/plugin-legacy/commit/6e7019af93c4a7a43fa7e1ef79c8b4bd1c797b3b))
+
 # [2.0.0](https://github.com/oclif/plugin-legacy/compare/1.3.6...2.0.0) (2023-10-24)
 
 - feat!: use core v3 (#304) ([71f7a99](https://github.com/oclif/plugin-legacy/commit/71f7a991742dc7f2ee245f4483988256d6ca55c7)), closes [#304](https://github.com/oclif/plugin-legacy/issues/304)
