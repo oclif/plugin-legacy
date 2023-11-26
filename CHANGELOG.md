@@ -1,3 +1,9 @@
+## [2.0.3](https://github.com/oclif/plugin-legacy/compare/2.0.2...2.0.3) (2023-11-26)
+
+### Bug Fixes
+
+- **deps:** bump minimatch from 3.0.4 to 3.1.2 ([#328](https://github.com/oclif/plugin-legacy/issues/328)) ([ff77c27](https://github.com/oclif/plugin-legacy/commit/ff77c2732f84e3c09488a155764a6797892257b5))
+
 ## [2.0.2](https://github.com/oclif/plugin-legacy/compare/2.0.1...2.0.2) (2023-11-05)
 
 ### Bug Fixes
