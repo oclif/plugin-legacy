@@ -1,3 +1,9 @@
+## [2.0.4](https://github.com/oclif/plugin-legacy/compare/2.0.3...2.0.4) (2023-11-26)
+
+### Bug Fixes
+
+- **deps:** bump moment from 2.24.0 to 2.29.4 ([#327](https://github.com/oclif/plugin-legacy/issues/327)) ([13ec3d0](https://github.com/oclif/plugin-legacy/commit/13ec3d01269fe2494c8f62c96757a2d7fd6d9a80))
+
 ## [2.0.3](https://github.com/oclif/plugin-legacy/compare/2.0.2...2.0.3) (2023-11-26)
 
 ### Bug Fixes
