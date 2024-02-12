@@ -1,3 +1,9 @@
+## [2.0.5](https://github.com/oclif/plugin-legacy/compare/2.0.4...2.0.5) (2024-02-12)
+
+### Bug Fixes
+
+- bump deps ([#356](https://github.com/oclif/plugin-legacy/issues/356)) ([770bf3d](https://github.com/oclif/plugin-legacy/commit/770bf3d0aec3939ee24c1ed2583908f77b838c3d))
+
 ## [2.0.4](https://github.com/oclif/plugin-legacy/compare/2.0.3...2.0.4) (2023-11-26)
 
 ### Bug Fixes
