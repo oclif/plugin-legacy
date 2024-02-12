@@ -56,10 +56,6 @@ export class PluginLegacy extends Plugin implements Interfaces.Plugin {
     debug('loading legacy plugin', base.root)
   }
 
-  get commandIDs(): string[] {
-    return super.commandIDs.concat(this.moduleCommands.map((c) => c.id))
-  }
-
   protected get moduleCommands(): Command.Class[] {
     if (this._moduleCommands) return this._moduleCommands
     const {main} = this.pjson
@@ -101,6 +97,14 @@ export class PluginLegacy extends Plugin implements Interfaces.Plugin {
     }
 
     if (opts.must) throw new Error(`command ${id} not found`)
+  }
+
+  protected async getCommandIds() {
+    return [
+      // @ts-expect-error because it's private
+      ...(await super.getCommandIds()),
+      ...this.moduleCommands.map((c) => c.id),
+    ]
   }
 
   private convertCommand(c: any): Command.Class {

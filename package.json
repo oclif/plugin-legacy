@@ -6,7 +6,7 @@
   "bugs": "https://github.com/oclif/plugin-legacy/issues",
   "dependencies": {
     "@oclif/color": "^1.0.13",
-    "@oclif/core": "^3.7.1",
+    "@oclif/core": "^3.19.1",
     "ansi-escapes": "^4.3.2",
     "debug": "^4.3.3",
     "semver": "^7.5.4"
@@ -15,9 +15,9 @@
     "@commitlint/config-conventional": "^17.8.1",
     "@heroku-cli/plugin-apps": "^7.59.1",
     "@heroku-cli/plugin-status": "5.0.10",
-    "@oclif/plugin-help": "^6",
+    "@oclif/plugin-help": "^6.0.12",
     "@oclif/prettier-config": "^0.2.1",
-    "@oclif/test": "^3.0.3",
+    "@oclif/test": "^3.1.16",
     "@types/chai": "^4.3.11",
     "@types/mocha": "^10.0.3",
     "@types/nock": "^11.1.0",
@@ -37,7 +37,7 @@
     "mocha": "^10.2.0",
     "nock": "^13.0.0",
     "nyc": "^15.1.0",
-    "oclif": "^4.0.2",
+    "oclif": "^4.4.8",
     "prettier": "^3.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.3.3"
