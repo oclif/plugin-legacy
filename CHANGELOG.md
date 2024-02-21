@@ -1,3 +1,9 @@
+## [2.0.7](https://github.com/oclif/plugin-legacy/compare/2.0.6...2.0.7) (2024-02-21)
+
+### Bug Fixes
+
+- **deps:** bump ip from 2.0.0 to 2.0.1 ([#363](https://github.com/oclif/plugin-legacy/issues/363)) ([038e414](https://github.com/oclif/plugin-legacy/commit/038e414e1a2fafd67c558440b669c8d11f2fc819))
+
 ## [2.0.6](https://github.com/oclif/plugin-legacy/compare/2.0.5...2.0.6) (2024-02-18)
 
 ### Bug Fixes
