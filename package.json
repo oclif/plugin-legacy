@@ -33,7 +33,7 @@
     "globby": "^11.1.0",
     "heroku-apps": "^2.4.22",
     "husky": "^8.0.3",
-    "lint-staged": "^15.0.1",
+    "lint-staged": "^15.2.2",
     "mocha": "^10.3.0",
     "nock": "^13.5.3",
     "nyc": "^15.1.0",
