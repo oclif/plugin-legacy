@@ -40,7 +40,7 @@
     "oclif": "^4.7.6",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.4"
+    "typescript": "^5.4.5"
   },
   "peerDependencies": {
     "@heroku-cli/command": "*"
