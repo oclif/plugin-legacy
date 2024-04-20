@@ -17,7 +17,7 @@
     "@heroku-cli/plugin-status": "5.0.10",
     "@oclif/plugin-help": "^6.0.20",
     "@oclif/prettier-config": "^0.2.1",
-    "@oclif/test": "^3.2.8",
+    "@oclif/test": "^3.2.10",
     "@types/chai": "^4.3.11",
     "@types/mocha": "^10.0.6",
     "@types/nock": "^11.1.0",
