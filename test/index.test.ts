@@ -1,8 +1,9 @@
-import {expect, test} from '@oclif/test'
+import {runCommand} from '@oclif/test'
+import {expect} from 'chai'
 
 describe('legacy', () => {
-  test
-    .stdout({print: true})
-    .command('status')
-    .it((ctx) => expect(ctx.stdout).to.contain('No known issues at this time'))
+  it('runs legacy command', async () => {
+    const {stdout} = await runCommand('status')
+    expect(stdout).to.contain('No known issues at this time')
+  })
 })
