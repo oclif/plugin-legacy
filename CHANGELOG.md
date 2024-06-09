@@ -1,3 +1,9 @@
+## [2.0.12](https://github.com/oclif/plugin-legacy/compare/2.0.11...2.0.12) (2024-06-09)
+
+### Bug Fixes
+
+- **deps:** bump @oclif/core from 3.26.6 to 3.27.0 ([#441](https://github.com/oclif/plugin-legacy/issues/441)) ([1fd522b](https://github.com/oclif/plugin-legacy/commit/1fd522b98fa1d8d925a110d713a2f1a42d8631f9))
+
 ## [2.0.11](https://github.com/oclif/plugin-legacy/compare/2.0.10...2.0.11) (2024-06-02)
 
 ### Bug Fixes
