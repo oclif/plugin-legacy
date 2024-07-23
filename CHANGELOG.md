@@ -1,3 +1,9 @@
+## [2.0.15](https://github.com/oclif/plugin-legacy/compare/2.0.14...2.0.15) (2024-07-23)
+
+### Bug Fixes
+
+- husky 9.1.1 fix ([#473](https://github.com/oclif/plugin-legacy/issues/473)) ([f77710c](https://github.com/oclif/plugin-legacy/commit/f77710c9a058b0b3ce5f4752b7cac443ff6cbef5))
+
 ## [2.0.14](https://github.com/oclif/plugin-legacy/compare/2.0.13...2.0.14) (2024-07-21)
 
 ### Bug Fixes
