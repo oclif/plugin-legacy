@@ -1,3 +1,9 @@
+## [2.0.17](https://github.com/oclif/plugin-legacy/compare/2.0.16...2.0.17) (2024-08-25)
+
+### Bug Fixes
+
+- **deps:** bump micromatch from 4.0.7 to 4.0.8 ([#497](https://github.com/oclif/plugin-legacy/issues/497)) ([4ad0d22](https://github.com/oclif/plugin-legacy/commit/4ad0d221f446bef2764321b33b9441d0c84fe5fc))
+
 ## [2.0.16](https://github.com/oclif/plugin-legacy/compare/2.0.15...2.0.16) (2024-08-04)
 
 ### Bug Fixes
