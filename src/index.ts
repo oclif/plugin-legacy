@@ -155,7 +155,7 @@ export class PluginLegacy extends Plugin implements Interfaces.Plugin {
 
       async run() {
         const color: typeof Color = require('@oclif/color').default
-        const {args, argv, flags} = this.parse(this.constructor as any)
+        const {args, argv, flags} = await this.parse(this.constructor as any)
         const ctx: any = {
           apiHost: vars.apiHost,
           apiToken: this.heroku.auth,
