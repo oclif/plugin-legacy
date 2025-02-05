@@ -1,3 +1,9 @@
+## [2.0.21](https://github.com/oclif/plugin-legacy/compare/2.0.20...2.0.21) (2025-02-05)
+
+### Bug Fixes
+
+- **#575:** parse() is not awaited ([#576](https://github.com/oclif/plugin-legacy/issues/576)) ([c192a9a](https://github.com/oclif/plugin-legacy/commit/c192a9ae92f089b38c9132554b67987a88d2f576)), closes [#575](https://github.com/oclif/plugin-legacy/issues/575)
+
 ## [2.0.20](https://github.com/oclif/plugin-legacy/compare/2.0.19...2.0.20) (2025-02-02)
 
 ### Bug Fixes
