@@ -1,3 +1,9 @@
+## [2.0.22](https://github.com/oclif/plugin-legacy/compare/2.0.21...2.0.22) (2025-02-09)
+
+### Bug Fixes
+
+- **deps:** bump semver from 7.7.0 to 7.7.1 ([#580](https://github.com/oclif/plugin-legacy/issues/580)) ([b87c4f3](https://github.com/oclif/plugin-legacy/commit/b87c4f3e7fb8cdac52aababdd48b637a7ce2cbdb))
+
 ## [2.0.21](https://github.com/oclif/plugin-legacy/compare/2.0.20...2.0.21) (2025-02-05)
 
 ### Bug Fixes
