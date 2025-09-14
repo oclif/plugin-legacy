@@ -1,3 +1,9 @@
+## [2.0.25](https://github.com/oclif/plugin-legacy/compare/2.0.24...2.0.25) (2025-09-14)
+
+### Bug Fixes
+
+- **deps:** bump debug from 4.4.1 to 4.4.3 ([#633](https://github.com/oclif/plugin-legacy/issues/633)) ([dd458ba](https://github.com/oclif/plugin-legacy/commit/dd458baa5fc2560436549658b9ce91db39441312))
+
 ## [2.0.24](https://github.com/oclif/plugin-legacy/compare/2.0.23...2.0.24) (2025-05-18)
 
 ### Bug Fixes
