@@ -9,7 +9,7 @@
     "@oclif/core": "^3.27.0",
     "ansi-escapes": "^4.3.2",
     "debug": "^4.4.3",
-    "semver": "^7.7.3"
+    "semver": "^7.7.4"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.8.1",
