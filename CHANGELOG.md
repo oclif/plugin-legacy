@@ -1,3 +1,9 @@
+## [2.0.29](https://github.com/oclif/plugin-legacy/compare/2.0.28...2.0.29) (2026-03-21)
+
+### Bug Fixes
+
+- **deps:** bump flatted from 3.1.0 to 3.4.2 ([#674](https://github.com/oclif/plugin-legacy/issues/674)) ([d14b49e](https://github.com/oclif/plugin-legacy/commit/d14b49e29c83a37ca9db962780bdf329a332bdb9))
+
 ## [2.0.28](https://github.com/oclif/plugin-legacy/compare/2.0.27...2.0.28) (2026-02-08)
 
 ### Bug Fixes
