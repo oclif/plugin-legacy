@@ -1,3 +1,9 @@
+## [2.0.30](https://github.com/oclif/plugin-legacy/compare/2.0.29...2.0.30) (2026-04-05)
+
+### Bug Fixes
+
+- **deps:** bump lodash from 4.17.23 to 4.18.1 ([#681](https://github.com/oclif/plugin-legacy/issues/681)) ([0cf3ad2](https://github.com/oclif/plugin-legacy/commit/0cf3ad2fc6592b861264c0832e3f61f258cc8421))
+
 ## [2.0.29](https://github.com/oclif/plugin-legacy/compare/2.0.28...2.0.29) (2026-03-21)
 
 ### Bug Fixes
