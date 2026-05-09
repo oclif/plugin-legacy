@@ -1,3 +1,9 @@
+## [2.0.31](https://github.com/oclif/plugin-legacy/compare/2.0.30...2.0.31) (2026-05-09)
+
+### Bug Fixes
+
+- **deps:** bump fast-xml-builder from 1.1.4 to 1.2.0 ([#688](https://github.com/oclif/plugin-legacy/issues/688)) ([aa3aeff](https://github.com/oclif/plugin-legacy/commit/aa3aeffac76007839c0a5bb98183dd8bd8b2ed81))
+
 ## [2.0.30](https://github.com/oclif/plugin-legacy/compare/2.0.29...2.0.30) (2026-04-05)
 
 ### Bug Fixes
