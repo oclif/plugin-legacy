@@ -1,3 +1,9 @@
+## [2.0.36](https://github.com/oclif/plugin-legacy/compare/2.0.35...2.0.36) (2026-06-21)
+
+### Bug Fixes
+
+- **deps:** bump @babel/core from 7.10.3 to 7.29.7 ([#706](https://github.com/oclif/plugin-legacy/issues/706)) ([7ee6918](https://github.com/oclif/plugin-legacy/commit/7ee6918d445957aab01c2f29e1c1ddd603ef0237))
+
 ## [2.0.35](https://github.com/oclif/plugin-legacy/compare/2.0.34...2.0.35) (2026-06-14)
 
 ### Bug Fixes
