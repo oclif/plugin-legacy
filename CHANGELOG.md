@@ -1,3 +1,9 @@
+# [2.1.0](https://github.com/oclif/plugin-legacy/compare/2.0.37...2.1.0) (2026-08-27)
+
+### Features
+
+- bumping eslint and ts (W-23983544) ([f2ebdd1](https://github.com/oclif/plugin-legacy/commit/f2ebdd1e3bef05b58d4fb62e60ea879da123c14a))
+
 ## [2.0.37](https://github.com/oclif/plugin-legacy/compare/2.0.36...2.0.37) (2026-06-22)
 
 ### Bug Fixes
