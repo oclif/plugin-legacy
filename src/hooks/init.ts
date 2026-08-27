@@ -1,7 +1,7 @@
-import {Config, Errors} from '@oclif/core'
+import {type Config, type Errors} from '@oclif/core'
 
-import {PluginLegacy} from '..'
-import {compact} from '../util'
+import {PluginLegacy} from '../index.js'
+import {compact} from '../util.js'
 
 const hook = async function ({config}: {config: Config}) {
   const plugins = await Promise.all(
