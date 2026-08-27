@@ -1,0 +1,72 @@
+{
+  "bin/dev.js": {
+    "node/shebang": {
+      "count": 1
+    }
+  },
+  "bin/run.js": {
+    "node/shebang": {
+      "count": 1
+    }
+  },
+  "eslint.config.mjs": {
+    "n/no-unsupported-features/node-builtins": {
+      "count": 3
+    }
+  },
+  "src/index.ts": {
+    "@eslint-community/eslint-comments/require-description": {
+      "count": 1
+    },
+    "@typescript-eslint/await-thenable": {
+      "count": 1
+    },
+    "@typescript-eslint/no-dynamic-delete": {
+      "count": 1
+    },
+    "@typescript-eslint/no-require-imports": {
+      "count": 8
+    },
+    "@typescript-eslint/no-shadow": {
+      "count": 1
+    },
+    "@typescript-eslint/no-unnecessary-type-conversion": {
+      "count": 1
+    },
+    "@typescript-eslint/no-unsafe-argument": {
+      "count": 6
+    },
+    "@typescript-eslint/no-unsafe-assignment": {
+      "count": 29
+    },
+    "@typescript-eslint/no-unsafe-call": {
+      "count": 11
+    },
+    "@typescript-eslint/no-unsafe-member-access": {
+      "count": 67
+    },
+    "@typescript-eslint/no-unsafe-return": {
+      "count": 7
+    },
+    "@typescript-eslint/prefer-nullish-coalescing": {
+      "count": 10
+    },
+    "unicorn/consistent-class-member-order": {
+      "count": 1
+    },
+    "unicorn/logical-assignment-operators": {
+      "count": 3
+    },
+    "unicorn/no-declarations-before-early-exit": {
+      "count": 1
+    },
+    "unicorn/prefer-private-class-fields": {
+      "count": 1
+    }
+  },
+  "src/util.ts": {
+    "@typescript-eslint/no-shadow": {
+      "count": 1
+    }
+  }
+}

@@ -1,12 +1,13 @@
 /* eslint-disable unicorn/prefer-spread */
-import * as HCli from '@heroku-cli/command'
-import {color as Color} from '@oclif/color'
-import {Command, Interfaces, Plugin} from '@oclif/core'
+import type * as HCli from '@heroku-cli/command'
+import type * as Semver from 'semver'
+
+import {type color as Color} from '@oclif/color'
+import {type Command, type Interfaces, Plugin} from '@oclif/core'
 import * as path from 'path'
-import * as Semver from 'semver'
 import {inspect} from 'util'
 
-import {compact} from './util'
+import {compact} from './util.js'
 
 const debug = require('debug')('@oclif/plugin-legacy')
 const pjson = require('../package.json')
@@ -15,7 +16,7 @@ function convertFlagsFromV5(Flags: any, flags: any): any {
   if (!flags) return {}
   if (!Array.isArray(flags)) return flags
   // eslint-disable-next-line unicorn/no-array-reduce
-  return flags.reduce((flags, flag) => {
+  return flags.reduce<any>((flags, flag) => {
     const opts = {
       char: flag.char,
       completion: flag.completion,
@@ -32,7 +33,7 @@ function convertFlagsFromV5(Flags: any, flags: any): any {
     if (!opts.parse) delete opts.parse
     flags[flag.name] = flag.hasValue ? Flags.string(opts as any) : Flags.boolean(opts as any)
     return flags
-  }, {} as any)
+  }, {})
 }
 
 type LegacyFlags = {
@@ -84,9 +85,7 @@ export class PluginLegacy extends Plugin implements Interfaces.Plugin {
   }
 
   async findCommand(id: string, opts: {must: true}): Promise<Command.Class>
-
   async findCommand(id: string, opts?: {must?: boolean}): Promise<Command.Class | undefined>
-
   async findCommand(id: string, opts: {must?: boolean} = {}): Promise<Command.Class | undefined> {
     let cmd = await super.findCommand(id)
     if (cmd) return this.convertCommand(cmd)
@@ -131,10 +130,9 @@ export class PluginLegacy extends Plugin implements Interfaces.Plugin {
     class V5 extends Command {
       static aliases = c.aliases || []
 
-      // eslint-disable-next-line unicorn/consistent-function-scoping
       static args = (c.args || []).map((a: any) => ({
         ...a,
-        required: a.required !== false && !(a as any).optional,
+        required: a.required !== false && !a.optional,
       }))
 
       static description = [c.description, c.help].join('\n')
@@ -202,7 +200,7 @@ export class PluginLegacy extends Plugin implements Interfaces.Plugin {
   }
 
   private isFlowCommand(command: any): any {
-    const c = command as any
+    const c = command
     return typeof c === 'function'
     // if (c._version && deps.semver.lt(c._version, '11.0.0')) return true
   }

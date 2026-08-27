@@ -6,13 +6,14 @@
   "bugs": "https://github.com/oclif/plugin-legacy/issues",
   "dependencies": {
     "@oclif/color": "^1.0.13",
-    "@oclif/core": "^3.27.0",
+    "@oclif/core": "^4.14.0",
     "ansi-escapes": "^4.3.2",
     "debug": "^4.4.3",
     "semver": "^7.8.5"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.8.1",
+    "@eslint/compat": "^1.4.1",
     "@heroku-cli/plugin-apps": "^7.59.1",
     "@heroku-cli/plugin-status": "5.0.10",
     "@oclif/plugin-help": "^6.2.53",
@@ -26,10 +27,10 @@
     "@types/supports-color": "^7.2.0",
     "chai": "^4.5.0",
     "commitlint": "^17.8.1",
-    "eslint": "^8.57.1",
-    "eslint-config-oclif": "^5.2.2",
+    "eslint": "^10.9.1",
+    "eslint-config-oclif": "^7.1.7",
     "eslint-config-oclif-typescript": "^3.1.14",
-    "eslint-config-prettier": "^9.1.2",
+    "eslint-config-prettier": "^10.1.8",
     "globby": "^11.1.0",
     "heroku-apps": "^2.4.22",
     "husky": "^9.1.7",
@@ -40,7 +41,7 @@
     "oclif": "^4.23.29",
     "prettier": "^3.9.6",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^6"
   },
   "peerDependencies": {
     "@heroku-cli/command": "*"
