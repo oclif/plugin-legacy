@@ -1,3 +1,11 @@
+# [3.0.0](https://github.com/oclif/plugin-legacy/compare/2.1.0...3.0.0) (2026-08-31)
+
+- feat!: upgrade oclif/core to v5 @W-23512455@ ([c9e66d4](https://github.com/oclif/plugin-legacy/commit/c9e66d44e7aac50615df867a8f1ea76c0c56a1a5))
+
+### BREAKING CHANGES
+
+- bump node engine to >=22.0.0
+
 # [2.1.0](https://github.com/oclif/plugin-legacy/compare/2.0.37...2.1.0) (2026-08-27)
 
 ### Features
