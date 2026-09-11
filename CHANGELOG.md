@@ -1,3 +1,9 @@
+# [3.1.0](https://github.com/oclif/plugin-legacy/compare/3.0.0...3.1.0) (2026-09-11)
+
+### Features
+
+- add legacy deprecation message ([e39868c](https://github.com/oclif/plugin-legacy/commit/e39868c6535a0541998dca5965fc7a5f659685d8))
+
 # [3.0.0](https://github.com/oclif/plugin-legacy/compare/2.1.0...3.0.0) (2026-08-31)
 
 - feat!: upgrade oclif/core to v5 @W-23512455@ ([c9e66d4](https://github.com/oclif/plugin-legacy/commit/c9e66d44e7aac50615df867a8f1ea76c0c56a1a5))
