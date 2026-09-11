@@ -9,11 +9,6 @@
       "count": 1
     }
   },
-  "eslint.config.mjs": {
-    "n/no-unsupported-features/node-builtins": {
-      "count": 3
-    }
-  },
   "src/index.ts": {
     "@eslint-community/eslint-comments/require-description": {
       "count": 1
