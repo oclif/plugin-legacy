@@ -1,5 +1,8 @@
 # @oclif/plugin-legacy
 
+⚠️ **This library has been deprecated.** ⚠️
+oclif no longer supports the use of legacy plugins.
+
 converts older style plugins to be compatible with oclif
 
 [![Version](https://img.shields.io/npm/v/@oclif/plugin-legacy.svg)](https://npmjs.org/package/@oclif/plugin-legacy)
